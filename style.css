@@ -43,8 +43,11 @@ body {
 
 .section_header>.title {
   width: 100%;
+  padding: 0 20px 10px 20px;
 
-  padding: 0 0 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   color: #fff;
   font-size: 50px;
@@ -78,13 +81,8 @@ body {
 /* スマホ用 */
 @media screen and (max-width: 820px) {
   .section_header .title {
-    font-size: 40px;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .section_header .title {
     font-size: 30px;
+    display: block;
   }
 }
 
@@ -156,6 +154,12 @@ body {
 .container>.title {
   width: 100%;
   padding-bottom: 8px;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  filter: drop-shadow(4px 4px 4px #00000040);
 }
 
 .container>.title>.category {
@@ -210,6 +214,13 @@ body {
 
 /* アイテム */
 
+.container .items {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  max-width: 1280px;
+}
+
 .container .item {
   display: flex;
   justify-content: center;
@@ -222,6 +233,8 @@ body {
   width: auto;
   max-width: 100%;
   max-height: 70svh;
+
+  filter: drop-shadow(4px 4px 4px #00000040);
 }
 
 .container.web_site .item {
@@ -239,7 +252,7 @@ body {
 /* スマホ用 */
 
 @media screen and (max-width: 1200px) {
-  .container>.item {
+  .container .item {
     width: 100%;
   }
 
